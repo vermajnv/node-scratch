@@ -1,0 +1,57 @@
+<div class="container">
+    <div class="title">
+        <h1>Mongo Exercise</h1>
+    </div>
+    <div class="child-container">
+        <div class="common">
+            <h4>Insert Data</h4>
+            <h1 class="line"></h1>
+            <form action="/insert" method="POST" class="common">
+                <label>Title</label>
+                <input type="text" name="title">
+                <label>Content</label>
+                <input type="text" name="content">
+                <label>Author</label>
+                <input type="text" name="author">
+                <button type="submit">INSERT</button>
+            </form>
+        </div>
+        <div class="common">
+            <h4>Get Data</h4>
+            <h1 class="line"></h1>
+            <a href="/get-data">LOAD DATA</a>
+            {{# each items}}
+            <div class="container">
+                <div>Title : {{ this.title}}</div>
+                <div>Author : {{ this.author}}</div>
+                <div>Content : {{ this.content}}</div>
+                <div>Id : {{ this._id}}</div>
+            </div>
+            {{/each}}
+        </div>
+        <div class="common">
+            <h4>Update Data</h4>
+            <h1 class="line"></h1>
+            <form action="/update" method="post">
+                <label>Id</label>
+                <input type="text" name="id">
+                <label>Title</label>
+                <input type="text" name="title">
+                <label>Content</label>
+                <input type="text" name="content">
+                <label>Author</label>
+                <input type="text" name="author">
+                <button type="submit">UPDATE</button>
+            </form>
+        </div>
+        <div class="common">
+            <h4>Delete Data</h4>
+            <h1 class="line"></h1>
+            <form action="/delete" method="post">
+                <label>Id</label>
+                <input type="text" name="id" id="id">
+                <button type="submit">DELETE</button>
+            </form>
+        </div>
+    </div>
+</div>

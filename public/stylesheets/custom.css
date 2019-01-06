@@ -1,0 +1,33 @@
+.container {
+    border : 1px solid red;
+    margin: 8px 0;
+    padding: 0 6px;
+    background-color: lightgray;
+    /* width: 100%; */
+    /* display: flex; */
+
+}
+
+.child-container {
+    display: flex;
+    font-display: column;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.common {
+    margin: 0 1rem;
+    max-width: 25vw;
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    flex: 4;
+}
+
+br {
+    border: 1px solid black;
+}
+
+.line {
+    border : 1px solid red;
+}
